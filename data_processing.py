@@ -1,7 +1,7 @@
 import pandas as pd 
 import json 
 import re
-
+import csv
 
 # loading csv file
 file_path = 'medicine_data.csv'
@@ -9,7 +9,7 @@ df = pd.read_csv(file_path)
 
 salt_drug_dict = {}
 
-pattern = r'([A-Za-z\s]+)(?=\s*\()'
+pattern = r'()'
 
 for index, row in df.iterrows():
     salt_composition = row['salt_composition']
